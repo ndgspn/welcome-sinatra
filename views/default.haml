@@ -1,0 +1,8 @@
+%head
+  %title Sinatra Newcommer
+%body
+  - @songs.each do |song|
+    %h3 
+      = song[:title]
+    %a{href: "#{song[:url]}", target: '_blank'} 
+      = song[:url] 

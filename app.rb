@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'haml'
 
 get '/' do
   "Hello Sinatra"
@@ -22,7 +23,7 @@ get '/index' do
       url: "https://www.youtube.com/watch?v=6E2hYDIFDIU"
     }
   ]
-  erb :default
+  haml :default
 end
 
 get '/api/v1' do
